@@ -1,0 +1,8 @@
+<div class='container px-5 px-sm-0'>
+  <div class="col-md-6 mx-auto">
+		<h1>Editing Book</h1>
+  	<%= render 'layouts/errors', obj: @book %>
+		<%= render 'form', book: @book %>
+		<%= link_to 'Show', book_path(@book), class: "book_#{@book.id}" %> |
+		<%= link_to 'Back', books_path, class: "back" %>
+</div>

@@ -1,0 +1,1 @@
+$("#comments_field").html("<div class='text-danger'>No blanks</div><%= escape_javascript(render partial: 'book_comments/book_comments_field', locals: {book: @book, book_comment: @new_book_comment} ) %>");

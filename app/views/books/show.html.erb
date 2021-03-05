@@ -1,0 +1,33 @@
+<div class='container px-5 px-sm-0'>
+  <div class='row'>
+
+    <div class='col-md-3'>
+      <h2>User info</h2>
+      <%= render 'users/info', user: @book.user %>
+      <h2 class="mt-3">New book</h2>
+      <%= render 'form', book: @new_book %>
+    </div>
+
+    <div class='col-md-8 offset-md-1'>
+
+      <!--bookの詳細を表示する為のレンダー-->
+      <div id="book_detaile">
+        <%= render 'book_detailed_information', book: @book %>
+      </div>
+
+      <!--コメント一覧のレンダー-->
+      <div id="comments_list" class="comments my-5">
+        <%= render 'book_comments/book_comments_list', book: @book %>
+      </div>
+
+      <div class="new-comment">
+        <div id="comments_field">
+          <!--コメントフォームのレンダー-->
+          <%= render 'book_comments/book_comments_field', {book: @book, book_comment: @book_comment} %>
+        </div>
+      </div>
+
+    </div><!--<div class='col-md-8 offset-md-1'>の終わり-->
+
+  </div><!--<div class='row'>の終わり-->
+</div><!--<div class='container px-5 px-sm-0'>-->
