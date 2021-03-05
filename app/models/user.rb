@@ -41,4 +41,10 @@ class User < ApplicationRecord
   validates :postcode
   end
 
+  # 以下課題9で設定
+
+
+
+  # 以上課題9で設定
+
 end
