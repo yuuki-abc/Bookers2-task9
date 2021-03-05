@@ -43,7 +43,9 @@ class User < ApplicationRecord
 
   # 以下課題9で設定
 
-
+  has_many :chats
+  has_many :user_rooms
+  has_many :rooms, through: :user_rooms
 
   # 以上課題9で設定
 
