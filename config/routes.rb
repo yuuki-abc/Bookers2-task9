@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'chat/show'
   root 'homes#top'
   get 'home/about' => 'homes#about'
   get 'search' => 'search#search'
