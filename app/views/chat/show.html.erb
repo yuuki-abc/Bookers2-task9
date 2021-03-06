@@ -1,9 +1,9 @@
 <div class='container px-5 px-sm-0'>
   <div class="col-md-8 mx-auto">
 
-    <p><%= @room_num %>番部屋</p>
-    <p>ようこそ<%= current_user.name %>さん</p>
-    <p class="mb-5">ここでは<%= @master.name %>さんと自由にお話が出来ます。</p>
+    <p class="text-center bg-light py-3 mb-5">ようこそ<%= current_user.name %>さん！<br>
+    ここでは<%= @master.name %>さんと自由にお話が出来ます。</p>
+
 
     <div id="chat_list">
       <% if @chats %>
