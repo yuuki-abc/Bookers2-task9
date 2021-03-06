@@ -1,14 +1,14 @@
 
 <% chats.each do |chat| %>
   <% if chat.user_id == current_user.id %>
-    <div class="w-100 mb-4">
-      <%= attachment_image_tag(current_user, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %>
-      <%= chat.message %>
-    </div>
+      <div class="w-45 mb-4">
+        <%= attachment_image_tag(current_user, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %>
+        <%= chat.message %>
+      </div>
   <% else %>
-    <div class="text-right w-100 mb-4">
-      <%= chat.message %>
-      <%= attachment_image_tag(@master, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %>
-    </div>
+      <div class="text-right ml-auto w-45 mb-4">
+        <%= chat.message %>
+        <%= attachment_image_tag(@master, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %>
+      </div>
   <% end %>
 <% end %>
