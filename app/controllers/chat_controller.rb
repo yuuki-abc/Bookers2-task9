@@ -1,16 +1,14 @@
 class ChatController < ApplicationController
+  before_action :chats_maker
 
   def show
     @master = User.find(params[:user_id])
     @new_chat = Chat.new
-    chats_maker
   end
 
-
   def update
-    @new_chat = Chat.new
-    chats_maker
     Chat.create(message: params[:chat][:message], user_id: current_user.id, room_id: @my_user_room.room_id)
+    @new_chat = Chat.new
     render 'chat_add'
   end
 
