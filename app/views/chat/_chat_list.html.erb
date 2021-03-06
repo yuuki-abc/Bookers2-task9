@@ -3,7 +3,7 @@
   <thead>
     <tr>
       <th>私</th>
-      <th>相手</th>
+      <th class="text-right">相手</th>
     </tr>
   </thead>
 
@@ -12,9 +12,11 @@
       <tr>
 
         <% if chat.user_id == current_user.id %>
-          <td>私<%= chat.message %></td>
+          <td><%= chat.message %></td>
+          <td></td>
         <% else %>
-          <td>相手<%= chat.message %></td>
+          <td class="text-right"></td>
+          <td class="text-right"><%= chat.message %></td>
         <% end %>
 
       </tr>

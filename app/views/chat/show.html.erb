@@ -1,15 +1,17 @@
 <div class='container px-5 px-sm-0'>
-  <div class="col-md-6 mx-auto">
+  <div class="col-md-8 mx-auto">
 
     <p>ようこそ<%= current_user.name %>さん</p>
-    <p>ここでは<%= @master.name %>と自由にお話が出来ます。</p>
+    <p class="mb-5">ここでは<%= @master.name %>さんと自由にお話が出来ます。</p>
 
     <div id="chat_list">
-      <%= render 'chat_list', chats: @chats %>
+      <% if @chats %>
+        <%= render 'chat_list', chats: @chats %>
+      <% end %>
     </div>
 
     <div id="chat_form" class="form mt-5">
-      <%= render 'chat_form', chat: @chat %>
+      <%= render 'chat_form', new_chat: @new_chat %>
     </div>
 
   </div>

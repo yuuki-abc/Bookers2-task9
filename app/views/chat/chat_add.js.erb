@@ -1,2 +1,2 @@
 $("#chat_list").html("<%= escape_javascript(render partial: 'chat/chat_list', locals: {chats: @chats}) %>");
-$("#chat_form").html("<%= escape_javascript(render partial: 'chat/chat_form', locals: {chat: @new_chat}) %>");
+$("#chat_form").html("<%= escape_javascript(render partial: 'chat/chat_form', locals: {new_chat: @new_chat}) %>");
