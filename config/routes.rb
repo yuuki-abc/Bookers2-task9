@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
 
   resources :users, only: [:show, :index, :edit, :update] do
-    resource :relationships, only: [:index, :create, :destroy]
+    resource :relationships, only: [:index, :create]
     resources :chat, only: [:show, :update, :destroy] # 質問 resourceに出来ないのか？
     get 'follows', 'followers'
   end
